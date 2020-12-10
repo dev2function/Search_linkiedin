@@ -4,7 +4,7 @@ from time import sleep
 
 
 def search_linkedin():
-    driver = webdriver.Chrome(executable_path="PATH_TO_FILE_WEBDRIVER")
+    driver = webdriver.Chrome(executable_path="/home/ori/WorkingDir/github/Search_linkiedin/chromedriver")
     driver.maximize_window()
     # driver.get('https://www.linkedin.com/login')
     # print(driver.title)
@@ -16,15 +16,14 @@ def search_linkedin():
     driver.find_element_by_name('q').send_keys('site:linkedin.com/in/ AND "I\'m hiring" AND "Israel"')
     driver.find_element_by_name('q').send_keys(Keys.RETURN)
     linkedin_urls = list()
-    for i in range(10):
-        sleep(2)
+    while len(linkedin_urls) < 150:
+        sleep(0.5)
         results = driver.find_elements_by_css_selector('div.g')
         for res in results:
             link = res.find_element_by_tag_name("a")
             linkedin_urls.append(f'{link.get_attribute("href")}\n')
-        driver.find_element_by_xpath("//*[contains(local-name(), 'span') and contains(text(), 'Next')]").click()
-        print(len(linkedin_urls))
-        print(linkedin_urls)
+            linkedin_urls = list(set(linkedin_urls))
+        driver.find_element_by_xpath('//*[@id="pnnext"]/span[2]').click()
     driver.quit()
     with open('new_links.txt', 'w') as li:
         li.writelines(linkedin_urls)

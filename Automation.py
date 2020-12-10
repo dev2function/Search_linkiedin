@@ -3,15 +3,8 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 import Urls
 
-def search_linkedin():
 
     drive = webdriver.Chrome(executable_path="PATH_TO_FILE_WEBDRIVER")
-    drive.maximize_window()
-    drive.get('https://www.linkedin.com/login')
-    print(drive.title)
-    username = drive.find_element_by_id('username').send_keys('email@gmail.com')
-    password = drive.find_element_by_id('password').send_keys('pessword')
-    log_in_button = drive.find_element_by_xpath('//*[@type="submit"]').click()
 
     drive.get('https:www.google.com')
     search_query = drive.find_element_by_name('q').send_keys('site:linkedin.com/in/ AND "I\'m hiring" AND "Israel"')
@@ -23,6 +16,11 @@ def search_linkedin():
     linkedin_urls = [url.text for url in linkedin_urls]
     print(len(linkedin_urls))
     print(linkedin_urls)
+    # driver.get('https://www.linkedin.com/login')
+    # print(driver.title)
+    # username = driver.find_element_by_id('username').send_keys('email@gmail.com')
+    # password = driver.find_element_by_id('password').send_keys('pessword')
+    # log_in_button = driver.find_element_by_xpath('//*[@type="submit"]').click()
 
     if linkedin_urls:
         Urls.add_url(url.text)

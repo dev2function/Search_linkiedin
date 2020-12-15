@@ -11,8 +11,8 @@ Then it stores the profile urls to a file for later use.
 1. First it goes to google.com and search for the query 'site:linkedin.com/in/ AND "KEYWORD" AND "LOCATION"'
     * Example query: 'site:linkedin.com/in/ AND "I\'m hiring" AND "Israel"'
 2. For every result it gets it stores the linkedin url to a file for later use 
-3. Login to your personal linkedin profile and iterate the list one by one to try to add them to your reined list with a personal note
-    * for every loop it puts the person url in a different list to indicate we already tried to add them to our personal fried list
+3. Login to your personal linkedin profile and iterate the list one by one to try to add them to your friend list with a personal note
+    * for every loop it puts the person url in a different list to indicate we already tried to add them to our personal friend list
     
 # What do I need to do to use your tool?
 Very little just 

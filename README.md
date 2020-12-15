@@ -16,7 +16,7 @@ Then it stores the profile urls to a file for later use.
     
 # What do I need to do to use your tool?
 Very little just 
-* substitute "WEBDRIVER_PATH" with your selenium webdriver path ([Get it here](https://www.selenium.dev/downloads/#browsersExpand "WebDrivers") )
+* substitute "WEBDRIVER_PATH" with your selenium webdriver path   (<a href="https://www.selenium.dev/downloads/#browsersExpand" target="_blank">Get it here</a>)
 * substitute "KEYWORD" with the desired search keyword, Example: "HR"
 * substitute "LOCATION" with the desired location, Example: "israel"
 * Create a file with a custom message inside the Messages folder

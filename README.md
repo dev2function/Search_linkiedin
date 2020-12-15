@@ -19,6 +19,9 @@ Very little just
 * substitute "WEBDRIVER_PATH" with your selenium webdriver path ([Get it here](https://www.selenium.dev/downloads/#browsersExpand "WebDrivers") )
 * substitute "KEYWORD" with the desired search keyword, Example: "HR"
 * substitute "LOCATION" with the desired location, Example: "israel"
+* Create a file with a custom message inside the Messages folder
+  * You can create more than one file, the code will choose one of them at random 
+  * One thing to keep in mind, Linkedin restricts the messages to only 300 characters so make sure not to write messages that are longer then that  
 * substitute "EMAIL_OR_USERNAME" and "PASSWORD" with your linkedin username and password
 * Run the script 
 

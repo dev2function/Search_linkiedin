@@ -36,8 +36,8 @@ def search_linkedin():
     with open('new_links.txt', 'w') as li:
         li.writelines(linkedin_urls)
     driver.get('https://www.linkedin.com/login')
-    driver.find_element_by_id('username').send_keys('EMAIL@gmail.com')
-    driver.find_element_by_id('password').send_keys('PESSWORD')
+    driver.find_element_by_id('username').send_keys('EMAIL_OR_USERNAME')
+    driver.find_element_by_id('password').send_keys('PASSWORD')
     driver.find_element_by_xpath('//*[@type="submit"]').click()
     wait.until(EC.element_to_be_clickable(
         (By.XPATH, "//*[contains(@class, 'search-global-typeahead')]")))

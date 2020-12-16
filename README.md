@@ -1,3 +1,6 @@
+![alt text](https://imgur.com/cz6wGC1.png)
+
+
 # Why do you need this thing?
 In present time it's very hard to be a junior in the Hi Tech echo system.   
 You always need to be on the edge for finding people to help you search for that desired job.  
